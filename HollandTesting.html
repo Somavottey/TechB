@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Self-Assessment Quiz: Discover Your Ideal Tech/IT Major</title>
+  <link rel="stylesheet" href="HollandTesting.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Self-Assessment Quiz: Discover Your Ideal Tech/IT Major</h1>
+    <p>This quiz is designed to help you explore your interests, skills, and personality traits to determine which of the tech and IT-related majors might be the best fit for you.</p>
+
+    <div id="quiz">
+      
+      <form id="quiz" onsubmit="calculateResults(event)">
+        <!-- Realistic (R) Traits -->
+      <div class="question">
+        <h2>Realistic (R) Traits</h2>
+        <p>1. I enjoy hands-on, technical, and practical work.</p>
+        <div class="likert">
+          <label for="q1-1"><input type="radio" id="q1-1" name="q1" value="1"> 1</label>
+          <label for="q1-2"><input type="radio" id="q1-2" name="q1" value="2"> 2</label>
+          <label for="q1-3"><input type="radio" id="q1-3" name="q1" value="3"> 3</label>
+          <label for="q1-4"><input type="radio" id="q1-4" name="q1" value="4"> 4</label>
+          <label for="q1-5"><input type="radio" id="q1-5" name="q1" value="5"> 5</label>
+        </div>
+        <p>2. I'm interested in learning about how things work, like machines, devices, or electronics.</p>
+        <div class="likert">
+          <label for="q2-1"><input type="radio" id="q2-1" name="q2" value="1"> 1</label>
+          <label for="q2-2"><input type="radio" id="q2-2" name="q2" value="2"> 2</label>
+          <label for="q2-3"><input type="radio" id="q2-3" name="q2" value="3"> 3</label>
+          <label for="q2-4"><input type="radio" id="q2-4" name="q2" value="4"> 4</label>
+          <label for="q2-5"><input type="radio" id="q2-5" name="q2" value="5"> 5</label>
+        </div>
+        <p>3. I prefer tasks that involve tangible, physical outcomes over abstract concepts.</p>
+        <div class="likert">
+          <label for="q3-1"><input type="radio" id="q3-1" name="q3" value="1"> 1</label>
+          <label for="q3-2"><input type="radio" id="q3-2" name="q3" value="2"> 2</label>
+          <label for="q3-3"><input type="radio" id="q3-3" name="q3" value="3"> 3</label>
+          <label for="q3-4"><input type="radio" id="q3-4" name="q3" value="4"> 4</label>
+          <label for="q3-5"><input type="radio" id="q3-5" name="q3" value="5"> 5</label>
+        </div>
+        <p>4. I'm good at troubleshooting and problem-solving with my hands.</p>
+        <div class="likert">
+          <label for="q4-1"><input type="radio" id="q4-1" name="q4" value="1"> 1</label>
+          <label for="q4-2"><input type="radio" id="q4-2" name="q4" value="2"> 2</label>
+          <label for="q4-3"><input type="radio" id="q4-3" name="q4" value="3"> 3</label>
+          <label for="q4-4"><input type="radio" id="q4-4" name="q4" value="4"> 4</label>
+          <label for="q4-5"><input type="radio" id="q4-5" name="q4" value="5"> 5</label>
+        </div>
+        <p>5. I enjoy working with tools, equipment, or technology to create or fix things.</p>
+        <div class="likert">
+          <label for="q5-1"><input type="radio" id="q5-1" name="q5" value="1"> 1</label>
+          <label for="q5-2"><input type="radio" id="q5-2" name="q5" value="2"> 2</label>
+          <label for="q5-3"><input type="radio" id="q5-3" name="q5" value="3"> 3</label>
+          <label for="q5-4"><input type="radio" id="q5-4" name="q5" value="4"> 4</label>
+          <label for="q5-5"><input type="radio" id="q5-5" name="q5" value="5"> 5</label>
+        </div>
+      </div>
+
+      <!-- Investigative (I) Traits -->
+      <div class="question">
+        <h2>Investigative (I) Traits</h2>
+        <p>6. I'm curious about how the world works and enjoy learning about complex topics.</p>
+        <div class="likert">
+          <label for="q6-1"><input type="radio" id="q6-1" name="q6" value="1"> 1</label>
+          <label for="q6-2"><input type="radio" id="q6-2" name="q6" value="2"> 2</label>
+          <label for="q6-3"><input type="radio" id="q6-3" name="q6" value="3"> 3</label>
+          <label for="q6-4"><input type="radio" id="q6-4" name="q6" value="4"> 4</label>
+          <label for="q6-5"><input type="radio" id="q6-5" name="q6" value="5"> 5</label>
+        </div>
+        <p>7. I like analyzing data, information, or problems to find solutions.</p>
+        <div class="likert">
+          <label for="q7-1"><input type="radio" id="q7-1" name="q7" value="1"> 1</label>
+          <label for="q7-2"><input type="radio" id="q7-2" name="q7" value="2"> 2</label>
+          <label for="q7-3"><input type="radio" id="q7-3" name="q7" value="3"> 3</label>
+          <label for="q7-4"><input type="radio" id="q7-4" name="q7" value="4"> 4</label>
+          <label for="q7-5"><input type="radio" id="q7-5" name="q7" value="5"> 5</label>
+        </div>
+        <p>8. I'm drawn to careers that involve research, science, or technology.</p>
+        <div class="likert">
+          <label for="q8-1"><input type="radio" id="q8-1" name="q8" value="1"> 1</label>
+          <label for="q8-2"><input type="radio" id="q8-2" name="q8" value="2"> 2</label>
+          <label for="q8-3"><input type="radio" id="q8-3" name="q8" value="3"> 3</label>
+          <label for="q8-4"><input type="radio" id="q8-4" name="q8" value="4"> 4</label>
+          <label for="q8-5"><input type="radio" id="q8-5" name="q8" value="5"> 5</label>
+        </div>
+        <p>9. I enjoy using logic, critical thinking, and problem-solving skills.</p>
+        <div class="likert">
+          <label for="q9-1"><input type="radio" id="q9-1" name="q9" value="1"> 1</label>
+          <label for="q9-2"><input type="radio" id="q9-2" name="q9" value="2"> 2</label>
+          <label for="q9-3"><input type="radio" id="q9-3" name="q9" value="3"> 3</label>
+          <label for="q9-4"><input type="radio" id="q9-4" name="q9" value="4"> 4</label>
+          <label for="q9-5"><input type="radio" id="q9-5" name="q9" value="5"> 5</label>
+        </div>
+        <p>10. I'm interested in exploring new ideas, theories, or innovations.</p>
+        <div class="likert">
+          <label for="q10-1"><input type="radio" id="q10-1" name="q10" value="1"> 1</label>
+          <label for="q10-2"><input type="radio" id="q10-2" name="q10" value="2"> 2</label>
+          <label for="q10-3"><input type="radio" id="q10-3" name="q10" value="3"> 3</label>
+          <label for="q10-4"><input type="radio" id="q10-4" name="q10" value="4"> 4</label>
+          <label for="q10-5"><input type="radio" id="q10-5" name="q10" value="5"> 5</label>
+        </div>
+      </div>
+
+      <!-- Artistic (A) Traits -->
+      <div class="question">
+        <h2>Artistic (A) Traits</h2>
+        <p>11. I have a strong creative side and enjoy expressing myself through art, design, or multimedia.</p>
+        <div class="likert">
+          <label for="q11-1"><input type="radio" id="q11-1" name="q11" value="1"> 1</label>
+          <label for="q11-2"><input type="radio" id="q11-2" name="q11" value="2"> 2</label>
+          <label for="q11-3"><input type="radio" id="q11-3" name="q11" value="3"> 3</label>
+          <label for="q11-4"><input type="radio" id="q11-4" name="q11" value="4"> 4</label>
+          <label for="q11-5"><input type="radio" id="q11-5" name="q11" value="5"> 5</label>
+        </div>
+        <p>12. I'm drawn to careers that allow me to use my imagination and creativity.</p>
+        <div class="likert">
+          <label for="q12-1"><input type="radio" id="q12-1" name="q12" value="1"> 1</label>
+          <label for="q12-2"><input type="radio" id="q12-2" name="q12" value="2"> 2</label>
+          <label for="q12-3"><input type="radio" id="q12-3" name="q12" value="3"> 3</label>
+          <label for="q12-4"><input type="radio" id="q12-4" name="q12" value="4"> 4</label>
+          <label for="q12-5"><input type="radio" id="q12-5" name="q12" value="5"> 5</label>
+        </div>
+        <p>13. I enjoy working on projects that involve aesthetics, visual appeal, or storytelling.</p>
+        <div class="likert">
+          <label for="q13-1"><input type="radio" id="q13-1" name="q13" value="1"> 1</label>
+          <label for="q13-2"><input type="radio" id="q13-2" name="q13" value="2"> 2</label>
+          <label for="q13-3"><input type="radio" id="q13-3" name="q13" value="3"> 3</label>
+          <label for="q13-4"><input type="radio" id="q13-4" name="q13" value="4"> 4</label>
+          <label for="q13-5"><input type="radio" id="q13-5" name="q13" value="5"> 5</label>
+        </div>
+        <p>14. I like to approach problems from a unique, unconventional perspective.</p>
+        <div class="likert">
+          <label for="q14-1"><input type="radio" id="q14-1" name="q14" value="1"> 1</label>
+          <label for="q14-2"><input type="radio" id="q14-2" name="q14" value="2"> 2</label>
+          <label for="q14-3"><input type="radio" id="q14-3" name="q14" value="3"> 3</label>
+          <label for="q14-4"><input type="radio" id="q14-4" name="q14" value="4"> 4</label>
+          <label for="q14-5"><input type="radio" id="q14-5" name="q14" value="5"> 5</label>
+        </div>
+        <p>15. I'm passionate about using technology to create engaging, visually appealing content.</p>
+        <div class="likert">
+          <label for="q15-1"><input type="radio" id="q15-1" name="q15" value="1"> 1</label>
+          <label for="q15-2"><input type="radio" id="q15-2" name="q15" value="2"> 2</label>
+          <label for="q15-3"><input type="radio" id="q15-3" name="q15" value="3"> 3</label>
+          <label for="q15-4"><input type="radio" id="q15-4" name="q15" value="4"> 4</label>
+          <label for="q15-5"><input type="radio" id="q15-5" name="q15" value="5"> 5</label>
+        </div>
+      </div>
+
+      <!-- Social (S) Traits -->
+      <div class="question">
+        <h2>Social (S) Traits</h2>
+        <p>16. I enjoy collaborating with others and working in a team environment.</p>
+        <div class="likert">
+          <label for="q16-1"><input type="radio" id="q16-1" name="q16" value="1"> 1</label>
+          <label for="q16-2"><input type="radio" id="q16-2" name="q16" value="2"> 2</label>
+          <label for="q16-3"><input type="radio" id="q16-3" name="q16" value="3"> 3</label>
+          <label for="q16-4"><input type="radio" id="q16-4" name="q16" value="4"> 4</label>
+          <label for="q16-5"><input type="radio" id="q16-5" name="q16" value="5"> 5</label>
+        </div>
+        <p>17. I'm interested in roles that involve teaching, training, or helping people.</p>
+        <div class="likert">
+          <label for="q17-1"><input type="radio" id="q17-1" name="q17" value="1"> 1</label>
+          <label for="q17-2"><input type="radio" id="q17-2" name="q17" value="2"> 2</label>
+          <label for="q17-3"><input type="radio" id="q17-3" name="q17" value="3"> 3</label>
+          <label for="q17-4"><input type="radio" id="q17-4" name="q17" value="4"> 4</label>
+          <label for="q17-5"><input type="radio" id="q17-5" name="q17" value="5"> 5</label>
+        </div>
+        <p>18. I'm skilled at communicating, explaining ideas, and building relationships.</p>
+        <div class="likert">
+          <label for="q18-1"><input type="radio" id="q18-1" name="q18" value="1"> 1</label>
+          <label for="q18-2"><input type="radio" id="q18-2" name="q18" value="2"> 2</label>
+          <label for="q18-3"><input type="radio" id="q18-3" name="q18" value="3"> 3</label>
+          <label for="q18-4"><input type="radio" id="q18-4" name="q18" value="4"> 4</label>
+          <label for="q18-5"><input type="radio" id="q18-5" name="q18" value="5"> 5</label>
+        </div>
+        <p>19. I'm drawn to careers that allow me to make a positive impact on others.</p>
+        <div class="likert">
+          <label for="q19-1"><input type="radio" id="q19-1" name="q19" value="1"> 1</label>
+          <label for="q19-2"><input type="radio" id="q19-2" name="q19" value="2"> 2</label>
+          <label for="q19-3"><input type="radio" id="q19-3" name="q19" value="3"> 3</label>
+          <label for="q19-4"><input type="radio" id="q19-4" name="q19" value="4"> 4</label>
+          <label for="q19-5"><input type="radio" id="q19-5" name="q19" value="5"> 5</label>
+        </div>
+        <p>20. I like being involved in projects that have a focus on people and their needs.</p>
+        <div class="likert">
+          <label for="q20-1"><input type="radio" id="q20-1" name="q20" value="1"> 1</label>
+          <label for="q20-2"><input type="radio" id="q20-2" name="q20" value="2"> 2</label>
+          <label for="q20-3"><input type="radio" id="q20-3" name="q20" value="3"> 3</label>
+          <label for="q20-4"><input type="radio" id="q20-4" name="q20" value="4"> 4</label>
+          <label for="q20-5"><input type="radio" id="q20-5" name="q20" value="5"> 5</label>
+        </div>
+      </div>
+
+      <!-- Enterprising (E) Traits -->
+      <div class="question">
+        <h2>Enterprising (E) Traits</h2>
+        <p>21. I'm interested in entrepreneurship, leadership, and taking on challenges.</p>
+        <div class="likert">
+          <label for="q21-1"><input type="radio" id="q21-1" name="q21" value="1"> 1</label>
+          <label for="q21-2"><input type="radio" id="q21-2" name="q21" value="2"> 2</label>
+          <label for="q21-3"><input type="radio" id="q21-3" name="q21" value="3"> 3</label>
+          <label for="q21-4"><input type="radio" id="q21-4" name="q21" value="4"> 4</label>
+          <label for="q21-5"><input type="radio" id="q21-5" name="q21" value="5"> 5</label>
+        </div>
+        <p>22. I enjoy roles that involve planning, organizing, and managing projects or people.</p>
+        <div class="likert">
+          <label for="q22-1"><input type="radio" id="q22-1" name="q22" value="1"> 1</label>
+          <label for="q22-2"><input type="radio" id="q22-2" name="q22" value="2"> 2</label>
+          <label for="q22-3"><input type="radio" id="q22-3" name="q22" value="3"> 3</label>
+          <label for="q22-4"><input type="radio" id="q22-4" name="q22" value="4"> 4</label>
+          <label for="q22-5"><input type="radio" id="q22-5" name="q22" value="5"> 5</label>
+        </div>
+        <p>23. I'm drawn to careers that allow me to be innovative, take risks, and make decisions.</p>
+        <div class="likert">
+          <label for="q23-1"><input type="radio" id="q23-1" name="q23" value="1"> 1</label>
+          <label for="q23-2"><input type="radio" id="q23-2" name="q23" value="2"> 2</label>
+          <label for="q23-3"><input type="radio" id="q23-3" name="q23" value="3"> 3</label>
+          <label for="q23-4"><input type="radio" id="q23-4" name="q23" value="4"> 4</label>
+          <label for="q23-5"><input type="radio" id="q23-5" name="q23" value="5"> 5</label>
+        </div>
+        <p>24. I'm skilled at persuading, influencing, and motivating others.</p>
+        <div class="likert">
+          <label for="q24-1"><input type="radio" id="q24-1" name="q24" value="1"> 1</label>
+          <label for="q24-2"><input type="radio" id="q24-2" name="q24" value="2"> 2</label>
+          <label for="q24-3"><input type="radio" id="q24-3" name="q24" value="3"> 3</label>
+          <label for="q24-4"><input type="radio" id="q24-4" name="q24" value="4"> 4</label>
+          <label for="q24-5"><input type="radio" id="q24-5" name="q24" value="5"> 5</label>
+        </div>
+        <p>25. I'm interested in roles that involve problem-solving, strategic thinking, and business acumen.</p>
+        <div class="likert">
+          <label for="q25-1"><input type="radio" id="q25-1" name="q25" value="1"> 1</label>
+          <label for="q25-2"><input type="radio" id="q25-2" name="q25" value="2"> 2</label>
+          <label for="q25-3"><input type="radio" id="q25-3" name="q25" value="3"> 3</label>
+          <label for="q25-4"><input type="radio" id="q25-4" name="q25" value="4"> 4</label>
+          <label for="q25-5"><input type="radio" id="q25-5" name="q25" value="5"> 5</label>
+        </div>
+      </div>
+
+      <!-- Conventional (C) Traits -->
+      <div class="question">
+        <h2>Conventional (C) Traits</h2>
+        <p>26. I'm detail-oriented and enjoy tasks that require accuracy and precision.</p>
+        <div class="likert">
+          <label for="q26-1"><input type="radio" id="q26-1" name="q26" value="1"> 1</label>
+          <label for="q26-2"><input type="radio" id="q26-2" name="q26" value="2"> 2</label>
+          <label for="q26-3"><input type="radio" id="q26-3" name="q26" value="3"> 3</label>
+          <label for="q26-4"><input type="radio" id="q26-4" name="q26" value="4"> 4</label>
+          <label for="q26-5"><input type="radio" id="q26-5" name="q26" value="5"> 5</label>
+        </div>
+        <p>27. I'm interested in roles that involve organizing, analyzing, and managing data or information.</p>
+        <div class="likert">
+          <label for="q27-1"><input type="radio" id="q27-1" name="q27" value="1"> 1</label>
+          <label for="q27-2"><input type="radio" id="q27-2" name="q27" value="2"> 2</label>
+          <label for="q27-3"><input type="radio" id="q27-3" name="q27" value="3"> 3</label>
+          <label for="q27-5"><input type="radio" id="q27-5" name="q27" value="5"> 5</label>
+        </div>
+        <p>28. I prefer structured, systematic, and well-defined processes and procedures.</p>
+        <div class="likert">
+          <label for="q28-1"><input type="radio" id="q28-1" name="q28" value="1"> 1</label>
+          <label for="q28-2"><input type="radio" id="q28-2" name="q28" value="2"> 2</label>
+          <label for="q28-3"><input type="radio" id="q28-3" name="q28" value="3"> 3</label>
+          <label for="q28-4"><input type="radio" id="q28-4" name="q28" value="4"> 4</label>
+          <label for="q28-5"><input type="radio" id="q28-5" name="q28" value="5"> 5</label>
+        </div>
+        <p>29. I'm skilled at working with technology, software, or digital tools to improve efficiency.</p>
+        <div class="likert">
+          <label for="q29-1"><input type="radio" id="q29-1" name="q29" value="1"> 1</label>
+          <label for="q29-2"><input type="radio" id="q29-2" name="q29" value="2"> 2</label>
+          <label for="q29-3"><input type="radio" id="q29-3" name="q29" value="3"> 3</label>
+          <label for="q29-4"><input type="radio" id="q29-4" name="q29" value="4"> 4</label>
+          <label for="q29-5"><input type="radio" id="q29-5" name="q29" value="5"> 5</label>
+        </div>
+        <p>30. I'm drawn to careers that allow me to work with numbers, budgets, or financial data.</p>
+        <div class="likert">
+          <label for="q30-1"><input type="radio" id="q30-1" name="q30" value="1"> 1</label>
+          <label for="q30-2"><input type="radio" id="q30-2" name="q30" value="2"> 2</label>
+          <label for="q30-3"><input type="radio" id="q30-3" name="q30" value="3"> 3</label>
+          <label for="q30-4"><input type="radio" id="q30-4" name="q30" value="4"> 4</label>
+          <label for="q30-5"><input type="radio" id="q30-5" name="q30" value="5"> 5</label>
+        </div>
+      </div>
+
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+       
+
+    <div id="results">
+      <h2>Your Ideal Tech/IT Major</h2>
+      <p id="majorResult"></p>
+    </div>
+  </div>
+
+  <script>
+    function calculateResults(event) {
+      event.preventDefault();  // Prevent the form from submitting normally
+
+      const scores = {
+        R: 0,
+        I: 0,
+        A: 0,
+        S: 0,
+        E: 0,
+        C: 0
+      };
+
+      const questions = [
+        {name: 'q1', trait: 'R'},
+        {name: 'q2', trait: 'R'},
+        {name: 'q3', trait: 'R'},
+        {name: 'q4', trait: 'R'},
+        {name: 'q5', trait: 'R'},
+
+        {name: 'q6', trait: 'I'},
+        {name: 'q7', trait: 'I'},
+        {name: 'q8', trait: 'I'},
+        {name: 'q9', trait: 'I'},
+        {name: 'q10', trait: 'I'},
+
+        {name: 'q11', trait: 'A'},
+        {name: 'q12', trait: 'A'},
+        {name: 'q13', trait: 'A'},
+        {name: 'q14', trait: 'A'},
+        {name: 'q15', trait: 'A'},
+
+        {name: 'q16', trait: 'S'},
+        {name: 'q17', trait: 'S'},
+        {name: 'q18', trait: 'S'},
+        {name: 'q19', trait: 'S'},
+        {name: 'q20', trait: 'S'},
+
+        {name: 'q21', trait: 'E'},
+        {name: 'q22', trait: 'E'},
+        {name: 'q23', trait: 'E'},
+        {name: 'q24', trait: 'E'},
+        {name: 'q25', trait: 'E'},
+
+        {name: 'q26', trait: 'C'},
+        {name: 'q27', trait: 'C'},
+        {name: 'q28', trait: 'C'},
+        {name: 'q29', trait: 'C'},
+        {name: 'q30', trait: 'C'},
+      ];
+
+      for (let i = 0; i < questions.length; i++) {
+        const selectedOption = document.querySelector(`input[name="${questions[i].name}"]:checked`);
+        if (selectedOption) {
+          scores[questions[i].trait] += parseInt(selectedOption.value);
+        } else {
+          alert(`Please answer question ${i + 1}`);
+          return;
+        }
+      }
+
+      let highestScore = -1;
+      let highestTrait = "";
+
+      for (const trait in scores) {
+        if (scores[trait] > highestScore) {
+          highestScore = scores[trait];
+          highestTrait = trait;
+        }
+      }
+
+      let majorResult = "";
+      switch (highestTrait) {
+        case 'R':
+          majorResult = "Computer Science, Telecommunications and Networking, Cybersecurity/Networking";
+          break;
+        case 'I':
+          majorResult = "Data Science and AI, Emerging Technologies";
+          break;
+        case 'A':
+          majorResult = "Design and Multimedia";
+          break;
+        case 'S':
+          majorResult = "Information Technology / Management";
+          break;
+        case 'E':
+          majorResult = "Software Engineering/ Development";
+          break;
+        case 'C':
+          majorResult = "Information Technology / Management, Cybersecurity/Networking";
+          break;
+      }
+
+      document.getElementById("majorResult").textContent = majorResult;
+      document.getElementById("results").style.display = "block";
+    }
+  </script>
+</body>
+</html>
